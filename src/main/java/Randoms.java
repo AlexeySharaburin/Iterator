@@ -1,7 +1,4 @@
-
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 
 public class Randoms implements Iterable<Integer> {
@@ -11,11 +8,9 @@ public class Randoms implements Iterable<Integer> {
     protected int max;
 
     public Randoms(int min, int max) {
-
         this.random = new Random();
         this.min = min;
         this.max = max;
-
     }
 
     @Override
@@ -32,8 +27,7 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public Integer next() {
-                int next = random.nextInt((max - min) + 1) + min;
-                return next;
+                return random.nextInt((max - min) + 1) + min;
             }
         };
 
